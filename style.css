@@ -1,0 +1,247 @@
+.container {
+    background: linear-gradient(45deg, rgb(0, 1, 70) 50%, rgb(255, 251, 0) 50%);
+    height: 300px;
+    width: 1850px;
+    text-align: center;
+    position: relative;
+    margin: 0;
+    border-radius: 2rem;
+    border: 2px solid yellow;
+    margin-left: 15px;
+}
+h1 {
+    color: yellow;
+    font-size: 3rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-100%);
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    width: 500px;
+    mix-blend-mode: difference;
+    animation: move linear infinite 10s;
+}
+
+@keyframes move {
+    0% {
+      transform: translate(-400px, -90px);
+    }
+    25% {
+      transform: translate(-220px, 0px);
+    }
+    50% {
+      transform: translate(-60px, -90px);
+    }
+    75% {
+      transform: translate(-220px, -180px)
+      }
+    100% {
+      transform: translate(-400px, -90px);
+      }
+    }
+
+body {
+    background: url(./Assets/Capture\ d’écran\ \(173\).png);
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+.flexbox {
+    text-transform: uppercase;
+    color: black;
+}
+
+main {
+    background: rgba(2, 0, 117, 0.822);
+    width: 500px;
+    border-radius: 2rem;
+    margin-left: 700px;
+    border: 2px solid yellow;
+    margin-top: 25px;
+    height: 500px;
+}
+
+h2 {
+    font-size: 2rem;
+    font-family:'Courier New', Courier, monospace;
+    margin-left: 15px;
+    color: yellow;
+}
+
+.slider {
+    width: 500px;
+    overflow: hidden;
+    margin-top: -508px;
+    margin-left: 15px;
+    border-radius: 2rem;
+    border: 2px yellow solid;
+}
+
+.slides {
+    width: calc(500px*3);
+    animation: glisse 10s infinite;
+}
+
+.slide {
+    float: left;
+}
+
+@keyframes glisse {
+    0% {
+        transform: translateX(0);
+    }
+    33% {
+        transform: translateX(-500px);
+    }
+    66% {
+        transform: translateX(-1000px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+h6{
+    font-size: 20px;
+    margin-top: -250px;
+    width: 500px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(255, 255, 0);
+    border: 2px solid yellow;
+    border-radius: 1.5rem;
+    margin-left: 1365px;
+    margin-top: -500px;
+    height: 500px;
+
+}
+
+ img {
+    border-radius: 1rem;
+    transition-duration: 1s;
+    transition-property: all;
+}
+
+img:hover {
+    transform: rotate(360deg);
+}
+  .neobody {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+  .card {
+    margin:0 auto;
+    width:240px;
+    height:320px;
+    perspective: 1000px;
+    text-align: center;
+  }
+  .card-inner {
+    position:relative;
+    width: 100%;
+    height:100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  .card-front, .card-back {
+    position:absolute;
+    height:100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    padding:16px;
+    border-radius:8px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  .card-front {
+    background-image:url(./Assets/misato\ 3.png);
+    background-size:cover;
+    background-position:center center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+  }
+  .card-front:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    background: linear-gradient(0deg, black, transparent);
+  }
+  .card-front .card-content {
+    z-index: 1;
+    color:white;
+  }
+  .card-front .card-content p {
+    color:#ececec;
+  }
+  .card-back {
+    transform: rotateY(180deg);
+    background:rgba(1, 8, 99, 0.856);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid yellow;
+  }
+  .card-back .card-image {
+    width:120px;
+    height:120px;
+    margin:0 auto;
+    border:solid 1px #cecece;
+    border-radius:100%;
+    background-image:url(./Assets/Mwa.jpg);
+    background-size:cover;
+    background-position:center center;
+  }
+  .card-back p {
+    margin-top:12px;
+  }
+  .card-back .card-icons {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-back .card-icons a {
+    font-size:18px;
+    color:rgb(255, 255, 255);
+    background:rgb(0, 0, 0);
+    width:42px;
+    height:42px;
+    border-radius:100%;
+    margin:8px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition:opacity .2s;
+  }
+  .card-back .card-icons a:hover {
+    cursor:pointer;
+    opacity:0.7;
+  }
+  .card-front {
+    transition: opacity .6s;
+  }
+  .card:hover .card-front {
+    opacity:0;
+ }
+  .neobody {
+    margin-top: -450px;
+    margin-left: -25px;
+  }
+  h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .back {
+    color: white;
+  }
